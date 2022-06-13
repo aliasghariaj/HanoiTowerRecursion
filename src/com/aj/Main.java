@@ -9,7 +9,7 @@ public class Main {
         System.out.print("Enter the number of disks: ");
         int diskNumbers = input.nextInt();
 
-        hanoiTower(diskNumbers, 'Start', 'Temp', 'Destination');
+        hanoiTower(diskNumbers, "Start", "Temp", "Destination");
     }
 
     // T(n)= 2^n-1
