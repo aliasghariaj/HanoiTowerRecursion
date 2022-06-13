@@ -9,15 +9,17 @@ public class Main {
         System.out.print("Enter the number of disks: ");
         int diskNumbers = input.nextInt();
 
-        hanoiTower(diskNumbers, 'S', 'A', 'D');
+        hanoiTower(diskNumbers, 'Start', 'Temp', 'Destination');
     }
 
-    private static void hanoiTower(int diskNumber, char start, char temp, char end) {
+    // T(n)= 2^n-1
+    private static void hanoiTower(int diskNumber, String start, String temp, String end) {
         if (diskNumber == 1)
-            System.out.println(start + "->" + end);
+            System.out.println(start + " -> " + end);
         else {
             hanoiTower(diskNumber - 1, start, end, temp);
-            System.out.println(start + "->" + end);
+            System.out.println(start + " -> " + end);
+
             hanoiTower(diskNumber - 1, temp, start, end);
         }
     }
